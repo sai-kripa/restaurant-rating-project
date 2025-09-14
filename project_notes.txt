@@ -1,0 +1,86 @@
+Task1: Predict Restaurant Rating
+
+Objective :Predict the aggregate restaurant rating
+
+method: 
+        Aggregate rating
+        Missing cuisines filled with "Unknown".
+        Label encoding for categorical features.
+        Train/test split (80/20)
+        model: Random Forest Regressor
+        Evaluation: Mean Squared Error(MSE) and R2 score
+ 
+results:
+       MSE:0.0273
+       R2:0.988
+       Top features: votes, Rating color, Rating Text.
+
+Observation:
+        Model performed very well. Votes had the strongest impact on predicting ratings
+ 
+
+Task2: Restaurant Recommendation
+
+Objective: Recommend restaurants similar to a given one based on cuisines.
+
+Method:
+       Target column: Cuisines
+       Missing Values replaced with "Unknown"
+       TF-IDF Vectorizer used to convert cuisine text into features.
+       cosine similarity calculated between restaurants.
+       A recommendation function was built to return the top-5 similar restaurants
+	
+Result:
+   Locavore- Filipino
+   Guevarra's- Filipino
+   Balay Dako- Filipino
+   Cafe Arabelle- Cafe, America, Italian, Filipino
+   
+ 
+Observation:
+       The system successfully recommends restaurants serving similar cuisines. This approach works well for content based recommendations.
+
+Task3-Cuisine Classification
+
+Objectives: Classify restaurants into cuisine categories.
+
+Method:
+       Target: Cuisines.
+       Missing cuisines filled with "Unknown".
+       Rate cuisine (<10 samples)grouped as "other".
+       Features extracted using TF-IDF Vectorization.
+       Train/test split 
+       model applied:
+                  Logistic Regression
+                  Random Forest Classifier
+      Evaluation: Accuracy and classification report   
+
+Result:
+
+Logistic Regression Accuracy:0.9209(92%)
+Random Forest Accuracy:018 (18%)
+
+Observation:
+            Logistic Regression was much better than Random Forest
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+      
+
+
+
+
+
